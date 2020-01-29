@@ -1,0 +1,138 @@
+.color-box {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  width: 100%;
+}
+.go-back-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  box-sizing: border-box;
+  background-color: #333;
+}
+.back-btn {
+  display: block;
+  width: 100% !important;
+  padding: 0.7rem;
+  color: #f4f4f4;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bolder;
+  text-transform: uppercase;
+}
+.copy-container {
+  width: 100%;
+}
+.copy-btn {
+  display: block;
+  width: 100% !important;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 0.7rem 0;
+  color: white;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 300ms ease, opacity 300ms ease;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.color-box:hover .copy-btn {
+  visibility: visible;
+  opacity: 1;
+}
+
+.see-more {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+}
+.see-more-link {
+  text-decoration: none;
+  color: #000;
+}
+.box-content {
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+}
+
+.copy-overlay {
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transition: transform 750ms ease-in-out;
+  pointer-events: none;
+  user-select: none;
+}
+.copy-overlay.show {
+  position: absolute;
+  opacity: 1;
+  transform: scale(25);
+  z-index: 5;
+  pointer-events: none;
+  user-select: none;
+}
+
+.copy-msg {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  cursor: default;
+  transition: opacity 350ms ease 500ms, transform 350ms ease 500ms;
+}
+.copy-msg h1 {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.2);
+  /* color: white; */
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  padding: 1rem;
+  font-size: 24px;
+  letter-spacing: 1.5px;
+  text-align: center;
+  pointer-events: none;
+  user-select: none;
+}
+.copy-msg p {
+  font-weight: 100;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #333;
+  pointer-events: none;
+  user-select: none;
+}
+
+.copy-msg.show {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(2);
+  z-index: 6;
+}
+
+.light-text {
+  color: white !important;
+}
+.dark-text {
+  color: black !important;
+}
+
+@media (max-width: 780px) {
+  .color-box {
+    padding: 1.3rem 0;
+  }
+}

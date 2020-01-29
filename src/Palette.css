@@ -1,0 +1,30 @@
+.palette {
+  height: 100vh;
+  overflow: hidden;
+}
+.palette-colors {
+  height: 90%;
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+}
+@media (max-width: 780px) {
+  .palette-colors {
+    grid-template-columns: 1fr 1fr;
+  }
+  .palette {
+    height: auto;
+    overflow: auto;
+  }
+}
+@media (max-width: 500px) {
+  .palette-colors {
+    grid-template-columns: 1fr;
+  }
+}
+.footer-palette {
+  height: 4vh;
+  padding: 0 1rem;
+  text-align: right;
+  line-height: 4vh;
+  font-size: 1.1rem;
+}
