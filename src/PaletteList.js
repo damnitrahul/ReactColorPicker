@@ -117,7 +117,7 @@ class PaletteList extends Component {
       <div className={classes.root}>
         <div className={classes.container}>
           <nav className={classes.nav}>
-            <h1>Colorify</h1>
+            <h1>Colorify 🎨</h1>
             <div>
               <Link to="" onClick={this.resetApp}>
                 Reset App

@@ -15,6 +15,26 @@ import './App.css';
 class App extends Component {
   constructor(props) {
     super(props);
+    console.log(
+      '%c 👋 Oh, Hi there, Web lover!',
+      'color: #d74034; font-size:24px;'
+    );
+    console.log(
+      `%c
+    ✨ Like what you see? We could work together!
+      
+    🐛 Found a bug? Please, let me know by e-mail, twitter, github issue...
+
+    🛠 Code available here: https://github.com/damnitrahul/ReactColorPicker
+      
+    📬 Find me here: https://twitter.com/damnitrahul
+      
+    Let the debug begin!
+    
+    Bonus meme: https://i.redd.it/jk2ddtjxv6b01.jpg
+    `,
+      'font-size:16px'
+    );
     const savedPalettes = JSON.parse(window.localStorage.getItem('palettes'));
     this.state = { palettes: savedPalettes || seedColor };
   }
